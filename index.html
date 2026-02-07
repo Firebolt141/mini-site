@@ -4,20 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mini Site</title>
-
-    <!-- This line "connects" your CSS file to the HTML -->
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
     <div class="page">
       <div class="card">
-        <h1>Hello, Marichan!</h1>
+        <h1>Hello, website!</h1>
         <p>
-          Now I can style my page with CSS. Next, I’ll add interactions with JavaScript.
+          Now I can style my page with CSS and add behavior with JavaScript.
         </p>
 
-        <button class="button" type="button">Push</button>
+        <hr class="divider" />
+
+        <h2>Counter</h2>
+        <p class="muted">
+          Count: <span id="countValue">0</span>
+        </p>
+        <button class="button" id="countButton" type="button">
+          +1
+        </button>
+
+        <hr class="divider" />
+
+        <h2>Mini Todo</h2>
+
+        <div class="row">
+          <input
+            class="input"
+            id="todoInput"
+            type="text"
+            placeholder="Type a todo..."
+          />
+          <button class="button" id="addTodoButton" type="button">
+            Add
+          </button>
+        </div>
+
+        <ul id="todoList" class="todoList"></ul>
       </div>
     </div>
+
+    <!-- Put JS at the bottom so the HTML loads first -->
+    <script src="/app.js"></script>
   </body>
 </html>
